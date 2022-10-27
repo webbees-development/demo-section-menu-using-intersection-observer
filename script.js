@@ -13,8 +13,8 @@ const observer = new IntersectionObserver((entries) => {
         if (link.getAttribute('href').includes(currentSection)) {
             link.classList.add("active");
         }
-    })
-})
+    });
+});
 
 document.querySelectorAll(".section-heading").forEach((section) => {
     observer.observe(section);
