@@ -18,4 +18,4 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll(".section-heading").forEach((section) => {
     observer.observe(section);
-})
+});
