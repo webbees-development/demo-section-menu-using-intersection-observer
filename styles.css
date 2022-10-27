@@ -1,0 +1,184 @@
+:root {
+    font-size: 16px;
+
+    /* color definitions */
+    --clr-primary: ;
+    --clr-secondary: ;
+    --clr-text: ;
+    --clr-accent: ;
+  
+    /* font face definitions */
+    --ff-primary: ;
+    --ff-secondary: ;
+    --ff-text: ;
+  
+    /* font size definitions */
+    --fs-100: 1.125em;
+    --fs-200: 1.25em;
+    --fs-300: 1.375em;
+    --fs-400: 1.563em;
+    --fs-500: 1.875em;
+    --fs-600: 3.125em;
+}
+  
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+  
+/* Remove default margin */
+* {
+    margin: 0;
+    padding: 0;
+}
+  
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+    list-style: none;
+}
+  
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+  
+html,
+body {
+    min-height: 100%;
+}
+  
+/* Set core body defaults */
+body {
+    text-rendering: optimizeSpeed;
+}
+  
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+  
+/* Make images easier to work with */
+img,
+picture,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* Make form inputs easier to work with */
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+  
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* utilities */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
+/* make footer stay in the bottom of the page
+   even if the content is not long enough
+   
+   only works when html structure is like
+   body
+    - header
+    - main
+    - footer
+*/
+body {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+
+/* project styles */
+header {
+    padding: 2rem;
+
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+
+    position: sticky;
+    top: 0;
+
+    background-color: white;
+}
+
+header ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+header a:hover {
+    font-weight: 700;
+    transform: scale(1.1);
+}
+
+section {
+    height: 120vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section#first-section {
+    background-color: hsla(100, 100%, 0%, 30%);
+}
+
+section#second-section {
+    background-color: hsla(100, 100%, 0%, 40%);
+}
+
+section#third-section {
+    background-color: hsla(100, 100%, 0%, 50%);
+}
+
+section#fourth-section {
+    background-color: hsla(100, 100%, 0%, 60%);
+}
+
+.active {
+    text-decoration: underline;
+}
